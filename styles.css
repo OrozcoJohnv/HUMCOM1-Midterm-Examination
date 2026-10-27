@@ -1,209 +1,246 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    height: 100%;
-    overflow: hidden;
 }
 
 body {
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+    background: #f0f2ff;
+    color: #1a202c;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
-    background-color: #FAF9F5;
-    color: #141413;
 }
 
-/* ---------- HEADER ---------- */
-header,
-footer {
-    background-color: #262624;
-    color: #FAF9F5;
+
+header {
+    background: #1a202c;
+    color: #fff;
+    text-align: center;
+    padding: 22px 16px;
+    border-bottom: 3px solid #4a6a8f;
 }
 
-.top-header {
-    height: 105px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    border-bottom: 1px solid #3D3D3A;
+header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
 }
 
-.logo {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: 3px solid #D97757;
-    object-fit: cover;
-}
-
-.brand {
-    font-size: 30px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
 
 nav {
-    height: 65px;
+    background: #2d3340;
+    border-bottom: 2px solid #11141a;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 nav a {
-    color: #FAF9F5;
+    color: #fff;
     text-decoration: none;
-    padding: 23px 45px;
-    font-size: 17px;
-    font-weight: bold;
+    font-weight: 700;
+    padding: 14px 24px;
+    border-left: 1px solid #1a202c;
+    transition: background 0.2s;
+}
+
+nav a:last-child {
+    border-right: 1px solid #1a202c;
 }
 
 nav a:hover,
+nav a:focus {
+    background: #3c4658;
+    outline: none;
+}
+
 nav a.active {
-    background-color: #D97757;
+    background: #4a6a8f;
 }
 
-/* ---------- DIVIDERS ---------- */
-.header-divider,
-.footer-divider {
-    height: 3px;
-    background: linear-gradient(90deg, #D97757, #E8B9A0);
-}
 
-/* ---------- MAIN + CARD ---------- */
 main {
     flex: 1;
-    padding: 55px 7%;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
 }
 
 .card {
-    height: 100%;
-    background-color: #F0EEE6;
+    background: #fff;
+    width: 100%;
+    max-width: 550px;
+    min-height: 480px;
+    border-top: 5px solid #1a202c;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-    overflow: hidden;
+    padding: 20px 28px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.avatar {
+    display: block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #1a202c;
+    object-fit: cover;
+    margin: 0 auto 14px;
 }
 
 .card h2 {
-    font-size: 42px;
-    color: #141413;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.tagline {
-    font-size: 20px;
-    font-style: italic;
-    color: #C6613F;
-    margin-bottom: 30px;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
     text-align: center;
-    padding: 22px;
-    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
 
-/* ---------- AUDIO ---------- */
-figure {
-    display: block;
-    text-align: center;
+.card p {
+    line-height: 1.5;
 }
 
-audio {
-    display: block;
-    margin: 0 auto 12px auto;
-    width: 400px;
-    max-width: 100%;
+
+.card ul {
+    margin: 10px 0 0 20px;
+    font-size: 0.85rem;
 }
 
-figcaption {
-    font-style: italic;
-    color: #5E5D59;
+.card li {
+    margin-bottom: 6px;
 }
 
-/* ---------- TABLE ---------- */
+
+.table-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
 table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
-}
-
-caption {
-    margin-bottom: 8px;
-    font-weight: bold;
+    font-size: 0.82rem;
 }
 
 th,
 td {
-    border: 1px solid #D97757;
-    padding: 8px;
-}
-
-th {
-    background-color: #E8DFD0;
-}
-
-/* ---------- LIST ---------- */
-ul {
-    text-align: left;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-/* ---------- FORM ---------- */
-form {
-    width: 80%;
+    border: 1px solid #ccc;
+    padding: 7px 9px;
     text-align: left;
 }
+
+thead th {
+    background: #1a202c;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background: #f7f8fb;
+}
+
+tfoot td {
+    font-style: italic;
+    background: #f0f0f0;
+    font-size: 0.75rem;
+}
+
+
+figure {
+    background: #f8f9fb;
+    border-left: 4px solid #4a6a8f;
+    padding: 12px;
+    text-align: center;
+}
+
+figure audio {
+    width: 100%;
+    max-width: 300px;
+}
+
+figcaption {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: #4a5568;
+    margin-top: 6px;
+}
+
 
 fieldset {
-    border: 1px solid #D97757;
-    border-radius: 8px;
-    padding: 12px;
+    border: none;
 }
 
 legend {
-    padding: 0 8px;
-    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 4px;
 }
 
 label {
     display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
     margin-top: 8px;
+    margin-bottom: 3px;
 }
 
 input,
 select,
 textarea {
     width: 100%;
-    padding: 6px;
+    padding: 7px 9px;
+    font-size: 0.8rem;
+    font-family: inherit;
+    border: 1px solid #aab;
+    border-radius: 3px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #4a6a8f;
+}
+
+textarea {
+    height: 46px;
+    resize: vertical;
 }
 
 button {
-    margin-top: 12px;
-    padding: 12px 34px;
-    background-color: #D97757;
-    color: #FAF9F5;
+    width: 100%;
+    margin-top: 10px;
+    padding: 9px;
+    background: #1a202c;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
     border: none;
-    border-radius: 30px;
-    font-weight: bold;
+    border-radius: 3px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #C6613F;
+button:hover,
+button:focus {
+    background: #3c4658;
 }
+
+footer {
+    background: #1a202c;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 14px;
+    border-top: 3px solid #4a6a8f;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 12px 14px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
+
